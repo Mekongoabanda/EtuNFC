@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 public class PrincipalActivity extends AppCompatActivity {
 
+    //On donne un id à nos demandes de permission
     private static final int PERMISSION_REQ_ID = 22;
     //Tableau de String pour nos permissions
     private static final String[] REQUESTED_PERMISSIONS = {
@@ -30,6 +31,8 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_principal );
 
+        //On vérifie si la méthode "checkSelfPermission" renvoit True sur les trois demandes de permissions
+        //Si OUI on execute notre code dans ce "if"
         if (checkSelfPermission(REQUESTED_PERMISSIONS[0], PERMISSION_REQ_ID) &&
                 checkSelfPermission(REQUESTED_PERMISSIONS[1], PERMISSION_REQ_ID) &&
                 checkSelfPermission(REQUESTED_PERMISSIONS[2], PERMISSION_REQ_ID)) {
@@ -70,7 +73,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     //TODO--------------------------------------------------------------------- PERMISSIONS DE L'APPLICATION -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    //Procédure checkSelfPermissions
+    //Procédure checkSelfPermissions qui prend en paramètre un String (type de permission) et un Int (requestID)
     private boolean checkSelfPermission(String permission, int requestCode) {
         if (ContextCompat.checkSelfPermission(this, permission) !=
                 PackageManager.PERMISSION_GRANTED) {
@@ -93,8 +96,6 @@ public class PrincipalActivity extends AppCompatActivity {
                         "/" + Manifest.permission.NFC + "/" + Manifest.permission.WRITE_EXTERNAL_STORAGE );
                 finish();
                 return;
-            }else {
-                super.onBackPressed();
             }
 
 
