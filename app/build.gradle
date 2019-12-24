@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "esirem.com.etunfc"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -49,6 +49,10 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'com.github.pro100svitlo:creditCardNfcReader:1.0.3'
+    implementation 'com.google.android.material:material:1.0.0'
 }
 repositories {
     mavenCentral()

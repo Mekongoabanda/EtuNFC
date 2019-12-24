@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">EtuNFC</string>
+    <string name="repoUrl">https://github.com/pro100svitlo/Credit-Card-NFC-Reader#questions-and-help</string>
+    <string name="tv_noNfc">Il n\'y a pas de module NFC sur cet appareil</string>
+    <string name="tv_tapYourCard">Veuillez mettre votre carte sur le panneau arrière du téléphone</string>
+    <string name="ad_progressBar_title">Numérisation ...</string>
+    <string name="ad_progressBar_mess">Veuillez ne pas retirer ou déplacer la carte pendant la lecture.</string>
+    <string name="snack_unknown_bank_card">Ceci est une carte bancaire inconnue.</string>
+    <string name="snack_doNotMoveCard">Veuillez ne pas déplacer la carte, réessayez!</string>
+    <string name="snack_unknownEmv">Carte EMV inconnue</string>
+    <string name="snack_lockedNfcCard">NFC is locked on this card.</string>
+    <string name="ad_nfcTurnOn_title">NFC est désactivé.</string>
+    <string name="ad_nfcTurnOn_message">Vous devez activer le module NFC pour la numérisation. Vous souhaitez l\'activer maintenant?</string>
+    <string name="ad_nfcTurnOn_pos">Activer!</string>
+    <string name="ad_nfcTurnOn_neg">Rejeter</string>
 </resources>
