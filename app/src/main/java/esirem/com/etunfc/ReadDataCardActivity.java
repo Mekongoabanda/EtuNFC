@@ -46,7 +46,7 @@ public class ReadDataCardActivity extends AppCompatActivity implements CardNfcAs
         //Si le tél ne dispose pas de NFC
         if( mNfcAdapter == null){
             //On affiche un message lui disant qu'il ny'a pas de NFC présente
-            TextView noNfc = (TextView)findViewById(android.R.id.candidatesArea);
+            TextView noNfc = (TextView)findViewById(R.id.NotHaveNFC_tv);
             noNfc.setVisibility( View.VISIBLE);
             Toast.makeText( this, "Votre téléphone ne dispose pas de la technologie NFC", Toast.LENGTH_LONG ).show();
         }else { //Si le tél dispose du module NFC
@@ -143,6 +143,7 @@ public class ReadDataCardActivity extends AppCompatActivity implements CardNfcAs
         mCardNumberText.setText(card);
         mExpireDateText.setText(expiredDate);
         parseCardType(cardType);
+
     }
 
     //Méthode pour dire à l'utilisateur "ne déplacez pas la carte si vite!!" LOOOL

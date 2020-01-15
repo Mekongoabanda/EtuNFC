@@ -2,10 +2,12 @@ package esirem.com.etunfc
 
 import android.content.Intent
 import android.graphics.Typeface
+import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,12 +18,27 @@ class MainActivity : AppCompatActivity() {
     private val daphnie_logo: ImageView? = null
     private val primous_logo: ImageView? = null
     private val mLogo: ImageView? = null
+    private var mNfcAdapter : NfcAdapter? = null
 
     private val tabImageView = arrayOf(edouard_logo, chantou_logo, daphnie_logo, primous_logo, mLogo)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+
+        if (mNfcAdapter == null){
+
+            Toast.makeText(applicationContext, "AUCUN NFC DETECTE", Toast.LENGTH_LONG).show()
+
+        }
+
+        if (mNfcAdapter != null){
+
+            Toast.makeText(applicationContext, "NFC Disponible", Toast.LENGTH_LONG).show()
+
+
 
         //LIAISON CODE-GUI
         projet_type = findViewById(R.id.projet_type)
@@ -62,5 +79,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         timer.start()
+    }
+
     }
 }

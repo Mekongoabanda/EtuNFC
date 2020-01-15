@@ -21,19 +21,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".NFC.EmulationNFC"></activity>
         <activity android:name=".ReadDataCardActivity">
-
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-
             </intent-filter>
 
             <meta-data
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
         </activity>
+
+        <!-- Déclaration de notre service HceService -->
+        <service
+            android:name=".NFC.HceService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NFC_SERVICE" >
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+            </intent-filter>
+            <!-- Fichier dans lequel est déclaré l’AID. Nous devons créer un dossier xml dans le dossier values
+            et créer un fichier apduservice.xml dans lequel nous allons déclarer l’AID de notre application   -->
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/apduservice" />
+        </service>
+
 
         <activity android:name=".PrincipalActivity">
             <intent-filter>

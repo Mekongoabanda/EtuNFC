@@ -125,6 +125,43 @@
             android:layout_marginTop="20dp"
             android:background="@color/White">
 
+            <LinearLayout
+                android:id="@+id/EmulationNFC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@color/White"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nfc_write">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emuler une carte"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/Black"
+                    android:textSize="16dp"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_separate">
+            </ImageView>
+
         </LinearLayout>
 
     </LinearLayout>
