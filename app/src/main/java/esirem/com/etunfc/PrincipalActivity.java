@@ -30,6 +30,7 @@ import java.util.Arrays;
 
 import esirem.com.etunfc.NFC.EmulationNFC;
 import esirem.com.etunfc.NFC.NFCInterface;
+import esirem.com.etunfc.NFC.ReadTagActivity;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscription;
@@ -49,7 +50,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
     private TextView txtNFCID, readTxt, writeTxt;
     private Subscription nfcSubscription;
-    private LinearLayout readBankCard_btn, writeBankCard_btn, EmulationNfc;
+    private LinearLayout readBankCard_btn, writeBankCard_btn, EmulationNfc, read_tag;
     private NfcAdapter mNfcAdapter;
 
     @Override
@@ -71,12 +72,14 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             readBankCard_btn=(LinearLayout)findViewById(R.id.read_bank_card);
             writeBankCard_btn=(LinearLayout)findViewById(R.id.read_tag);
             EmulationNfc=(LinearLayout)findViewById(R.id.EmulationNFC);
+            read_tag = findViewById( R.id.read_tag );
 
             //Police
             Typeface FONT_BugLife = Typeface.createFromAsset( getAssets(), "fonts/MavenPro-Medium.ttf");
             readTxt.setTypeface(FONT_BugLife, Typeface.BOLD);
             readBankCard_btn.setOnClickListener( this );
             EmulationNfc.setOnClickListener( this );
+            read_tag.setOnClickListener( this );
 
         }
 
@@ -133,9 +136,16 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
         }
 
-        if (v == readBankCard_btn){
+        if (v == EmulationNfc){
 
             Intent i  = new Intent( PrincipalActivity.this, EmulationNFC.class );
+            startActivity( i );
+
+        }
+
+        if (v == read_tag){
+
+            Intent i  = new Intent( PrincipalActivity.this, ReadTagActivity.class );
             startActivity( i );
 
         }
