@@ -66,7 +66,6 @@ public class ReadDataCardActivity extends AppCompatActivity implements CardNfcAs
             onNewIntent( getIntent() );
         }
 
-
     }
 
     @Override

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NFC.EmulationNFC">
+    tools:context=".NewReadEmulate.WriteData">
 
     <Button
         android:id="@+id/tglReadWrite"
@@ -17,9 +17,11 @@
     </Button>
 
     <EditText
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Veuillez entrer le message à envoyer"
+        android:textColorHint="@color/gris_statut_moi"
         android:layout_centerInParent="true">
 
     </EditText>

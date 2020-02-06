@@ -44,7 +44,6 @@ class EmulationNFC : AppCompatActivity() {
                 showTurnOnNfcDialog()
             } else if (mNfcAdapter!!.isEnabled) { //Si le tél dispose du module NFC et NFC activé
                 write_btn = findViewById(R.id.tglReadWrite)
-                txtTagContent = findViewById(R.id.txtTagContent)
             }
         }
     }

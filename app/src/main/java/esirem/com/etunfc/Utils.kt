@@ -21,6 +21,12 @@ class Utils {
             return result
         }
 
+        //val charset = Charsets.UTF_8
+        //val result = data.toByteArray(charset)
+        //println(result.contentToString()) // [72, 101, 108, 108, 111]
+        //println(result.toString(charset)) // Hello
+
+
         private val HEX_CHARS_ARRAY = "0123456789ABCDEF".toCharArray()
         fun toHex(byteArray: ByteArray) : String {
             val result = StringBuffer()
