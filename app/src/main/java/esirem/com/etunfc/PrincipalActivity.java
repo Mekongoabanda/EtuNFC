@@ -31,6 +31,7 @@ import java.util.Arrays;
 import esirem.com.etunfc.NFC.EmulationNFC;
 import esirem.com.etunfc.NFC.NFCInterface;
 import esirem.com.etunfc.NFC.ReadTagActivity;
+import esirem.com.etunfc.NewReadEmulate.WriteData;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscription;
@@ -138,7 +139,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
         if (v == EmulationNfc){
 
-            Intent i  = new Intent( PrincipalActivity.this, EmulationNFC.class );
+            Intent i  = new Intent( PrincipalActivity.this, WriteData.class );
             startActivity( i );
 
         }

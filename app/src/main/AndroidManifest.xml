@@ -21,7 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".NewReadEmulate.WriteData"></activity>
+        <activity android:name=".NewReadEmulate.WriteData">
+
+        </activity>
         <activity android:name=".NewReadEmulate.ReadData" />
         <activity android:name=".NFC.ReadTagActivity" />
         <activity android:name=".NFC.EmulationNFC" />
